@@ -134,16 +134,17 @@ class IconButton(context: Context, appContext: AppContext) :
         modifier = Modifier.fromExpoModifiers(props.modifiers.value)
       ) {
         if (drawable != null) {
-           Icon(
-              painter = androidx.compose.ui.res.painterResource(
-                context.resources.getIdentifier(
-                  drawable,
-                  "drawable",
-                  context.packageName
-                )
-              ),
+           val resId = context.resources.getIdentifier(
+            drawable,
+            "drawable",
+            context.packageName
+          )
+          if (resId != 0) {
+            Icon(
+              painter = androidx.compose.ui.res.painterResource(resId),
               contentDescription = drawable
             )
+          }
         } else {
           getImageVector(systemImage)?.let {
               Icon(
