@@ -1,0 +1,45 @@
+{
+  "name": "expo-jetpack-iconbutton",
+  "version": "0.0.12",
+  "description": "expo-jetpack-iconbutton",
+  "sideEffects": false,
+  "exports": {
+    "./package.json": "./package.json",
+    "./jetpack-compose": {
+      "types": "./build/jetpack-compose/index.d.ts",
+      "default": "./src/jetpack-compose/index.ts"
+    },
+    "./jetpack-compose-primitives": {
+      "types": "./build/jetpack-compose-primitives/index.d.ts",
+      "default": "./src/jetpack-compose-primitives/index.tsx"
+    }
+  },
+  "scripts": {
+    "build": "expo-module build",
+    "clean": "expo-module clean",
+    "lint": "expo-module lint",
+    "test": "expo-module test",
+    "prepare": "expo-module prepare",
+    "prepublishOnly": "expo-module prepublishOnly",
+    "expo-module": "expo-module"
+  },
+  "keywords": [
+    "react-native",
+    "expo",
+    "UI components",
+    "SwiftUI",
+    "Jetpack Compose"
+  ],
+  "author": "cutls",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "~19.1.10",
+    "expo-module-scripts": "^5.0.7"
+  },
+  "peerDependencies": {
+    "expo": "*",
+    "react": "*",
+    "react-native": "*"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}
